@@ -1,0 +1,33 @@
+{
+	"generic": {
+	  "username": "snigdha98.3@gmail.com",
+	  "password": "Prithu@123",
+	  "dashboard_url": "https://rahulshettyacademy.com/client/dashboard/dash"
+	},
+	"TC001-Test to Plcae An Order": {
+	  "username": "snigdha98.3@gmail.com",
+	  "password": "Prithu@123",
+	  "blinktext": " User can only see maximum 9 products on a page",
+	  "toastmessage": " Product Added To Cart ",
+	  "productname": "zara coat 3",
+	  "creditcardno": "1111222233334444",
+	  "expmonth": "09",
+	  "expdate": "26",
+	  "cvv": "123",
+	  "fullname": "Max Payne",
+	  "couponcode": "rahulshettyacademy",
+	  "country": "India"
+	},
+	"TC002": {
+	  "username": "snigdha98.3@gmail.com",
+	  "password": "Prithu@123",
+	  "productname": "zara coat 3",
+	  "creditcardno": "1111222233334444",
+	  "expmonth": "09",
+	  "expdate": "26",
+	  "cvv": "123",
+	  "fullname": "Max Payne",
+	  "couponcode": "rahulshettyacademy",
+	  "country": "India"
+	}
+  }
