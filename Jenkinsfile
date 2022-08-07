@@ -21,8 +21,7 @@ pipeline {
     stage('test') {
       steps {
         bat '''
-          npx playwright test --list
-          npx playwright test --config=playwright.config_custom.js
+          npx playwright test --headed
         '''
       }
     }
