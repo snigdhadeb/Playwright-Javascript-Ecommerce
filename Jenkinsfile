@@ -20,9 +20,7 @@ pipeline {
     }
     stage('test') {
       steps {
-        bat '''
-          npx playwright test --headed
-        '''
+        bat 'npx playwright test --headed'
       }
     }
   }
