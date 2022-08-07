@@ -22,7 +22,7 @@ pipeline {
       steps {
         bat '''
           npx playwright test --list
-          npx playwright test
+          npx playwright test --config=playwright.config_custom.js
         '''
       }
     }
