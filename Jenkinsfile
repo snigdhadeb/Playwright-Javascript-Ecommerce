@@ -18,7 +18,7 @@ pipeline {
     }
     stage('test') {
       steps {
-        bat 'npx playwright test --config=playwright.config_custom.js'
+        bat 'npx playwright test'
       }
     }
   }
