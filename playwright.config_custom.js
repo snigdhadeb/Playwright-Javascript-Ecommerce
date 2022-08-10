@@ -17,10 +17,10 @@ module.exports = {
         screenshot: `only-on-failure`,
         video: `retain-on-failure`,
         contextOptions: {recordVideo: { dir: "./videos"}},
-        trace: `retain-on-failure`,
+        trace: `on`,
       },
     },
-    {
+    /* {
       name: `Firefox`,
       use: {
         browserName: `firefox`,
@@ -44,6 +44,6 @@ module.exports = {
         video: `retain-on-failure`,
         trace: `retain-on-failure`,
       },
-    },
+    }, */
   ],
 };

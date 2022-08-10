@@ -53,6 +53,18 @@ const config = {
         headless: false,
       },
     },
+    {
+      name: `Safari`,
+      use: {
+        browserName: `webkit`,
+        viewport: { width: 1720, height: 850 },
+        ignoreHTTPSErrors: true,
+        headless:false,
+        screenshot: `only-on-failure`,
+        video: `retain-on-failure`,
+        trace: `retain-on-failure`,
+      },
+    }
 
     
 
