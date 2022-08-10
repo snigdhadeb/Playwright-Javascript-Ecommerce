@@ -20,7 +20,7 @@ module.exports = {
         trace: `retain-on-failure`,
       },
     },
-    /* {
+    {
       name: `Firefox`,
       use: {
         browserName: `firefox`,
@@ -44,6 +44,6 @@ module.exports = {
         video: `retain-on-failure`,
         trace: `retain-on-failure`,
       },
-    }, */
+    },
   ],
 };
