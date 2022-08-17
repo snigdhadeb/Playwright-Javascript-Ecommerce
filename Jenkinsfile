@@ -10,6 +10,7 @@ pipeline {
       steps {
         sh 'npm i -D @playwright/test' 
         sh 'npx playwright install' 
+        sh 'npx playwright install chrome'
       }
     }
     stage('help') {
