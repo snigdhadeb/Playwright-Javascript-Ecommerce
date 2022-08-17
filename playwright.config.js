@@ -47,6 +47,12 @@ const config = {
   /* Configure projects for major browsers */
   projects: [
     {
+      name: 'chromium',
+      use: {
+        ...devices['Desktop Chrome'],
+      },
+    },
+    /* {
       name: `Chrome`,
       use: {
         browserName: `chromium`,
@@ -58,7 +64,7 @@ const config = {
         contextOptions: {recordVideo: { dir: "./videos"}},
         trace: `retain-on-failure`,
       },
-    },
+    }, */
     /* {
       name: `Firefox`,
       use: {
