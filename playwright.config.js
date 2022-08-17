@@ -59,7 +59,7 @@ const config = {
         trace: `retain-on-failure`,
       },
     },
-    {
+    /* {
       name: `Firefox`,
       use: {
         browserName: `firefox`,
@@ -83,7 +83,7 @@ const config = {
         video: `retain-on-failure`,
         trace: `retain-on-failure`,
       },
-    },
+    }, */
   ],
 
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */
