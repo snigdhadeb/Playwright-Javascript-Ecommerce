@@ -19,7 +19,7 @@ pipeline {
     }
     stage('test') {
       steps {
-        sh 'npx playwright test'
+        sh 'npx playwright test --browser=chrome'
       }
     }
   }
