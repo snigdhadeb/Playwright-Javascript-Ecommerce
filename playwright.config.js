@@ -47,10 +47,30 @@ const config = {
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
+      name: `Chrome`,
       use: {
-        ...devices['Desktop Chrome'],
+        browserName: `chromium`,
+        channel: `chrome`,
         headless: false,
+        viewport: { width: 1720, height: 850 },
+        screenshot: `only-on-failure`,
+        video: `retain-on-failure`,
+        contextOptions: {recordVideo: { dir: "./videos"}},
+        trace: `retain-on-failure`,
+      },
+    },
+    {
+      name: `Firefox`,
+      use: {
+        browserName: `firefox`,
+        viewport: { width: 1720, height: 850 },
+        ignoreHTTPSErrors: true,
+        screenshot: `only-on-failure`,
+        video: `retain-on-failure`,
+        trace: `retain-on-failure`,
+        launchOptions: {
+          slowMo: 200,
+        },
       },
     },
     {
@@ -59,42 +79,11 @@ const config = {
         browserName: `webkit`,
         viewport: { width: 1720, height: 850 },
         ignoreHTTPSErrors: true,
-        headless:false,
         screenshot: `only-on-failure`,
         video: `retain-on-failure`,
         trace: `retain-on-failure`,
       },
-    }
-
-    
-
-    /* Test against mobile viewports. */
-    // {
-    //   name: 'Mobile Chrome',
-    //   use: {
-    //     ...devices['Pixel 5'],
-    //   },
-    // },
-    // {
-    //   name: 'Mobile Safari',
-    //   use: {
-    //     ...devices['iPhone 12'],
-    //   },
-    // },
-
-    /* Test against branded browsers. */
-    // {
-    //   name: 'Microsoft Edge',
-    //   use: {
-    //     channel: 'msedge',
-    //   },
-    // },
-    // {
-    //   name: 'Google Chrome',
-    //   use: {
-    //     channel: 'chrome',
-    //   },
-    // },
+    },
   ],
 
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */

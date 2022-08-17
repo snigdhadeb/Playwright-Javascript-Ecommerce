@@ -1,7 +1,7 @@
 pipeline {
   agent{ 
     docker { 
-      image 'mcr.microsoft.com/playwright:v1.24.2-focal'
+      image 'mcr.microsoft.com/playwright:v1.25.0-focal'
       args '--privileged'
     } 
   }
