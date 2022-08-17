@@ -9,8 +9,7 @@ pipeline {
     stage('install playwright') {
       steps {
         sh 'npm i -D @playwright/test' 
-        sh 'npx playwright install' 
-        sh 'npx playwright install chrome'
+        sh 'npx playwright install'
       }
     }
     stage('help') {
