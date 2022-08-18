@@ -51,6 +51,10 @@ const config = {
       use: {
         ...devices['Desktop Chrome'],
         //headless:false,
+        screenshot: `on`,
+        video: `on`,
+        contextOptions: {recordVideo: { dir: "./videos"}},
+        trace: `on`,
       },
     },
     /* {
