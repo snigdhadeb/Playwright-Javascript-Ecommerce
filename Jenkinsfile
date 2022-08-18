@@ -19,9 +19,10 @@ pipeline {
       post {
         always {
             archiveArtifacts artifacts: 'playwright-report/*'
-            archiveArtifacts artifacts: 'playwright-report/data/*'
-            archiveArtifacts artifacts: 'playwright-report/trace/*'
         }
+      }
+      steps{
+        sh 'npx playwright show-report'
       }
     }
   }
