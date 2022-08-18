@@ -12,14 +12,21 @@ pipeline {
         sh 'npx playwright install'
       }
     }
-    stage('help') {
+    stage('install Allure Report') {
       steps {
-        sh 'npx playwright test --help'
+        sh 'npm install -g allure-commandline --save-dev'
       }
     }
     stage('test') {
       steps {
-        sh 'npx playwright test'
+        sh 'npx playwright test --reporter=line,allure-playwright'
+        sh 'npx allure generate allure-results -o allure-report --clean && allure open allure-report'
+      }
+      post {
+        always {
+            archiveArtifacts artifacts: 'allure-results/*'
+            archiveArtifacts artifacts: 'allure-report/*'
+        }
       }
     }
   }
