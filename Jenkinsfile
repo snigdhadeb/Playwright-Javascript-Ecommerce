@@ -19,7 +19,8 @@ pipeline {
       post {
         always {
             archiveArtifacts artifacts: 'playwright-report/*'
-            //archiveArtifacts artifacts: 'test-results/*'
+            archiveArtifacts artifacts: 'playwright-report/data/*'
+            archiveArtifacts artifacts: 'playwright-report/trace/*'
         }
       }
     }
