@@ -35,4 +35,10 @@ docker run -u root --name jenkins-j -d -p 9091:8080 -p 50001:50000 --group-add 0
   <li>Click on 'Build Now' to trigger your jenkins job</li>
 </ul>
 
+## Where to find Mounted docker volumes in Windows?
+Run the below command in file explorer.
+```
+\\wsl$\docker-desktop-data\data\docker\volumes
+```
+
 ####REMEMBER: Even if you set "headless:false" in the config file, You won't see any browser window displayed when running in the docker, unless you set up some kind of "remote desktop" in the docker.
