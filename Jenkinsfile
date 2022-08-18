@@ -6,7 +6,7 @@ pipeline {
     } 
   }
   environment{
-    JAVA_HOME="${tool 'openjdk_11_0_16'}"
+    JAVA_HOME="/opt/java/openjdk"
     PATH="${JAVA_HOME}/bin:${PATH}"
   }
   stages {
