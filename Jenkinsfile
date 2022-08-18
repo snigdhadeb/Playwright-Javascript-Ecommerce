@@ -5,6 +5,10 @@ pipeline {
       args '--privileged'
     } 
   }
+  environment{
+    env.JAVA_HOME="${tool 'openjdk_11_0_1'}"
+    env.PATH="${env.JAVA_HOME}/bin:${env.PATH}"
+  }
   stages {
     stage('install playwright') {
       steps {
