@@ -51,6 +51,14 @@ Run the below command in file explorer.
  ```
  System.setProperty("hudson.model.DirectoryBrowserSupport.CSP"," ")
  ```
+ OR
+ ```
+ String curCsp = System.getProperty("hudson.model.DirectoryBrowserSupport.CSP","");
+if (!curCsp.contains("media-src"))
+{
+       System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", curCsp + ";media-src 'self';");
+}
+ ```
  
   <li>Now build your job and once done, click on the index.html report, it will show the report</li>
 </ul>
