@@ -7,7 +7,7 @@ pipeline {
   }
   environment{
     JAVA_HOME="/opt/java/openjdk"
-    PATH="${JAVA_HOME}/bin:${PATH}"
+    PATH="${JAVA_HOME}/bin" 
   }
   stages {
     stage('install playwright') {
