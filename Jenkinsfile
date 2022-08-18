@@ -19,7 +19,14 @@ pipeline {
       post {
         always {
             archiveArtifacts artifacts: 'playwright-report/*'
-            sh 'npx playwright show-report'
+            publishHTML target: [
+            allowMissing: false,
+            alwaysLinkToLastBuild: false,
+            keepAll: true,
+            reportDir: 'playwright-report',
+            reportFiles: 'index.html',
+            reportName: 'RCov Report'
+          ]
         }
       }
     }
