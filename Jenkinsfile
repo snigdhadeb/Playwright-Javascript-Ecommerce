@@ -6,8 +6,8 @@ pipeline {
     } 
   }
   environment{
-    env.JAVA_HOME="${tool 'openjdk_11_0_16'}"
-    env.PATH="${env.JAVA_HOME}/bin:${env.PATH}"
+    JAVA_HOME="${tool 'openjdk_11_0_16'}"
+    PATH="${JAVA_HOME}/bin:${PATH}"
   }
   stages {
     stage('install playwright') {
