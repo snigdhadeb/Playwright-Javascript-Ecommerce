@@ -35,6 +35,8 @@ docker run -u root --name jenkins-j -d -p 9091:8080 -p 50001:50000 --group-add 0
   <li>Click on 'Build Now' to trigger your jenkins job</li>
 </ul>
 
+#### REMEMBER: Even if you set "headless:false" in the config file, You won't see any browser window displayed when running in the docker, unless you set up some kind of "remote desktop" in the docker.
+
 ## Where to find Mounted docker volumes in Windows?
 Run the below command in file explorer.
 ```
@@ -45,10 +47,10 @@ Run the below command in file explorer.
 <ul>
   <li>Add ArchieveArtifacts in your pipeline and archieve 'Playwright-report'</li>
   <li>Go to Script Console and type the below command:</li>
+ 
  ```
  System.setProperty("hudson.model.DirectoryBrowserSupport.CSP"," ")
  ```
+ 
   <li>Now build your job and once done, click on the index.html report, it will show the report</li>
 </ul>
-
-####REMEMBER: Even if you set "headless:false" in the config file, You won't see any browser window displayed when running in the docker, unless you set up some kind of "remote desktop" in the docker.
