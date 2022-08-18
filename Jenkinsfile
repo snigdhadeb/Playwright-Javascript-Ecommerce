@@ -19,7 +19,6 @@ pipeline {
       post {
         always {
             archiveArtifacts artifacts: 'playwright-report/*'
-            sh 'npx playwright show-trace test-results/PlaceOrderTest_WithFixtures--SmokeTest-TC001-Test-to-Plcae-An-Order-chromium/trace.zip'
         }
       }
     }
