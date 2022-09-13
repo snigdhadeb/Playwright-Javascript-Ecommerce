@@ -14,7 +14,8 @@ pipeline {
     }
     stage('test') {
       steps {
-        sh 'xvfb-run npx playwright test'
+        sh 'sudo apt-get install xvfb'
+        sh 'xvfb-run -a --server-args="-screen 0 1280x800x24 -ac -nolisten tcp -dpi 96 +extension RANDR" npx playwright test'
       }
       post {
         always {
