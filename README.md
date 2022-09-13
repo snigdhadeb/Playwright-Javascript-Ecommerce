@@ -1,4 +1,4 @@
-# Playwright-Javascript-Ecommerce By Snigdhadeb Samanta
+# Playwright-Javascript-Ecommerce: DOCKER IN DOCKER: By Snigdhadeb Samanta
 A playwright framework to automate an e-commerece site
 
  ## **** HOW TO RUN DOCKER IN A DOCKER **** ##
