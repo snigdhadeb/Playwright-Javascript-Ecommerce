@@ -14,7 +14,7 @@ pipeline {
     }
     stage('test') {
       steps {
-        sh 'npx playwright test'
+        sh 'xvfb-run npx playwright test'
       }
       post {
         always {

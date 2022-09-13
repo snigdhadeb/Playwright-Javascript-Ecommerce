@@ -50,7 +50,7 @@ const config = {
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
-        //headless:false,
+        headless:false,
         screenshot: `on`,
         video: `on`,
         contextOptions: {recordVideo: { dir: "./videos"}},
